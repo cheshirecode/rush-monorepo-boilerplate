@@ -58,7 +58,7 @@ jobs:
         if: inputs.lcov != null
         working-directory: ${{ inputs.package-path }}/${{ github.jobs[github.job].name }}
         run: |
-          echo ${{ inputs.package-path }} - ${{ github.jobs[github.job].name }}
+          echo - ${{ inputs.package-path }} - ${{ github.jobs[github.job].name }} -
           node $GITHUB_WORKSPACE/common/scripts/install-run-rushx.js coverage
       - name: Coveralls GitHub Action
         if: inputs.lcov != null
