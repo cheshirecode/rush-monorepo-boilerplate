@@ -7,7 +7,6 @@ jobs:
   base:
     uses: ./.github/workflows/base.yml
     with:
-      package-name: ' '
       build: false
       lcov: false
       storybook: false
